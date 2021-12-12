@@ -37,7 +37,7 @@ Flutterプロジェクト用のテンプレートリポジトリ
 
 ## 使い方
 
-### ⌘ + shift * R で 「flutter_template」 を新規プロジェクト名に置換する  
+### ⌘ + shift + R で 「flutter_template」 を新規プロジェクト名に置換する  
 
 - README.mdの見出し
 - pubspec.yaml の name
