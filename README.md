@@ -41,16 +41,13 @@ Flutterプロジェクト用のテンプレートリポジトリ
 
 - README.mdの見出し
 - pubspec.yaml の name
-
 - android/app/build.gradle の applicationId
 - 以下のAndroidManifest.xml の package名
   * android/app/src/debug/
   * android/app/src/main/
   * android/app/src/profile
 - android/app/src/main/AndroidManifest.xml の android:label
-
 - MainActivity の import文
-
 - ios/Runner/info.plist の CFBundleName
 
 ### 上記で書き換えられない部分を手で書き換える
