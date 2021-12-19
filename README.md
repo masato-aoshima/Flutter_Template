@@ -4,6 +4,11 @@ Flutterプロジェクト用のテンプレートリポジトリ
 
 ## このテンプレートの機能 (予定)
 
+### Flutterのバージョン管理
+
+- [ ] Flutter Version ManageMent (fvm_config.json)
+
+
 ### Dart-defineで開発環境を分ける
 
 - [ ] アプリのID (bundleId, applicationId)
