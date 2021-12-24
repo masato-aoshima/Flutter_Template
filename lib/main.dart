@@ -51,6 +51,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const Text(
+              String.fromEnvironment('FLAVOR'),
+            ),
             Text(
               AppLocalizations.of(context)!.helloWorld,
             ),
