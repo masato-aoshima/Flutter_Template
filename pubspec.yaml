@@ -19,6 +19,7 @@ dependencies:
   # Firebase
   firebase_core: ^0.4.0+9
   firebase_analytics: ^5.0.2
+  firebase_crashlytics: ^0.1.4+1
 
 dev_dependencies:
   flutter_test:
