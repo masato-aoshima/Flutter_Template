@@ -43,6 +43,8 @@ tasks.whenTaskAdded { task ->
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+// Firebase
+apply plugin: 'com.google.gms.google-services'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
@@ -63,7 +65,7 @@ android {
 
     defaultConfig {
         applicationId "com.aoc4456.flutter_template"
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -87,4 +89,7 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // Firebase BoMを使用すると、1つのバージョンのみを指定することで、Firebaseライブラリのすべてのバージョンを管理できます
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation 'com.google.firebase:firebase-analytics'
 }
