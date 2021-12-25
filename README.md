@@ -2,19 +2,26 @@
 
 Flutterプロジェクト用のテンプレートリポジトリ
 
-## このテンプレートの機能 (予定)
+## このテンプレートの機能
 
 ### Flutterのバージョン管理
 
-- [ ] Flutter Version ManageMent (fvm_config.json)
-
+- [x] asdf (flutter 2.8.0-stable)
 
 ### Dart-defineで開発環境を分ける
 
-- [ ] アプリのID (bundleId, applicationId)
-- [ ] ホームで表示される名前
-- [ ] アプリのアイコン
-- [ ] 署名の設定 (Provisioning Profile, Keystore)
+TODO: 表を書く
+
+- [x] アプリのID (bundleId, applicationId)
+- [x] アプリのアイコン
+
+### Firebase
+
+１つのプロジェクトで複数のアプリ(Flavor)を管理する
+(Flavorごとにプロジェクトを分けない)
+
+- [x] Firebase Analytics
+- [x] Firebase Crashlytics
 
 ### Linter
 
@@ -27,16 +34,7 @@ Flutterプロジェクト用のテンプレートリポジトリ
 ### サポートするOSバージョン  
 
 - [ ] iOS_
-- [ ] Android_
-
-
-### その他
-
-#### iOS
-
-- [ ] 輸出コンプライアンス情報
-
-#### Android
+- [x] Android_5.0 (minSdkVersion = 21)
 
 ---
 
@@ -59,3 +57,16 @@ Flutterプロジェクト用のテンプレートリポジトリ
 
 - ios/Runner/info.plistのCFBundleDisplayName
 - Xcodeを起動してBundle Identifier を書き換える
+
+
+### Firebaseの設定
+
+#### Android
+
+- android/app/ の配下にgoogle-services.jsonを配置する
+
+#### iOS
+
+- ios/Runner/Runner/ の配下にGoogleService-Infoを配置する (FinderではなくXcode上で配置すること)
+- TARGETS -> Build Phase -> Firebase Crashlyticsのスクリプトの\<googleAppId\>を、  
+GoogleService-InfoのGOOGLE_APP_IDに書き換える // TODO : Flavor対応
