@@ -70,7 +70,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        if (dartEnvironmentVariables.FLAVOR != 'prod') {
+        if (dartEnvironmentVariables.FLAVOR != 'product') {
             applicationIdSuffix ".${dartEnvironmentVariables.FLAVOR}"
         }
     }
