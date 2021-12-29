@@ -246,7 +246,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\\cp -f ${SRCROOT}/${FLAVOR}/GoogleService-Info.plist ${SRCROOT}/GoogleService-Info.plist\n";
+			shellScript = "\\cp -f ${SRCROOT}/firebase/${FLAVOR}/GoogleService-Info.plist ${SRCROOT}/GoogleService-Info.plist\n";
 		};
 		5E7547FB27774D5A00CDDC55 /* Firebase Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
