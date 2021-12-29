@@ -49,5 +49,3 @@ app.*.map.json
 **/android/app/src/main/res/drawable*/
 
 **/ios/Flutter/DartDefines.xcconfig
-google-services.json
-GoogleService-Info.plist
