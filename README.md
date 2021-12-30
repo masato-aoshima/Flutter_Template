@@ -1,4 +1,4 @@
-# flutter_template
+# Flutter_Template
 
 Flutterプロジェクト用のテンプレートリポジトリ
 
@@ -10,10 +10,15 @@ Flutterプロジェクト用のテンプレートリポジトリ
 
 ### Dart-defineで開発環境を分ける
 
-TODO: 表を書く
+|  環境  |  ビルドタイプ  | コマンド |
+| ---- | ---- | ---- |
+|  dev  |  debug  | flutter run --dart-define=FLAVOR=dev |
+|  stg  |  release  | flutter run --release --dart-define=FLAVOR=stg |
+|  product  |  release  | flutter run --release --dart-define=FLAVOR=product |
 
 - [x] アプリのID (bundleId, applicationId)
 - [x] アプリのアイコン
+- [x] Firebase 
 
 ### Firebase
 
@@ -33,12 +38,16 @@ TODO: 表を書く
 
 ### サポートするOSバージョン  
 
-- [ ] iOS_
+- [x] iOS_10.0 (MinimumOSVersion = 10.0)
 - [x] Android_5.0 (minSdkVersion = 21)
 
 ---
 
 ## 使い方
+
+### asdfバージョン、依存ライブラリバージョンの最新化
+
+このテンプレートを引き継ぐ前に、テンプレート自体の更新が必要か確認する
 
 ### ⌘ + shift + R で 「flutter_template」 を新規プロジェクト名に置換する  
 
@@ -50,13 +59,13 @@ TODO: 表を書く
   * android/app/src/main/
   * android/app/src/profile
 - android/app/src/main/AndroidManifest.xml の android:label
-- MainActivity の import文
+- MainActivity の package
 - ios/Runner/info.plist の CFBundleName
 
 ### 上記で書き換えられない部分を手で書き換える
 
-- ios/Runner/info.plistのCFBundleDisplayName
-- Xcodeを起動してBundle Identifier を書き換える
+- CFBundleDisplayName (Xcodeで検索)
+- Xcode > Runner > TARGETS Runner > Build Settings の Product Bundle Identifier
 
 
 ### Firebaseの設定
@@ -67,6 +76,6 @@ TODO: 表を書く
 
 #### iOS
 
-- ios/Runner/Runner/ の配下にGoogleService-Infoを配置する (FinderではなくXcode上で配置すること)
-- TARGETS -> Build Phase -> Firebase Crashlyticsのスクリプトの\<googleAppId\>を、  
-GoogleService-InfoのGOOGLE_APP_IDに書き換える // TODO : Flavor対応
+- ios/firebaseディレクトリを作成する。  
+その配下に更に/dev /stg /product ディレクトリを作成してGoogleService-Infoをそれぞれ配置する
+- ios/Runner/ の配下にどれでもいいのでGoogleService-Infoを配置する (FinderではなくXcode上で配置すること)
