@@ -64,6 +64,7 @@ Flutterプロジェクト用のテンプレートリポジトリ
 
 ### 上記で書き換えられない部分を手で書き換える
 
+- android/app/src/main/res/values-en,values-ja
 - CFBundleDisplayName (Xcodeで検索)
 - Xcode > Runner > TARGETS Runner > Build Settings の Product Bundle Identifier
 
